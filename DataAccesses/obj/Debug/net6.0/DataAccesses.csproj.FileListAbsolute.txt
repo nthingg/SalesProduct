@@ -1,0 +1,14 @@
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\bin\Debug\net6.0\DataAccesses.deps.json
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\bin\Debug\net6.0\DataAccesses.runtimeconfig.json
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\bin\Debug\net6.0\DataAccesses.dll
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\bin\Debug\net6.0\DataAccesses.pdb
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\obj\Debug\net6.0\DataAccesses.csproj.AssemblyReference.cache
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\obj\Debug\net6.0\DataAccesses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\obj\Debug\net6.0\DataAccesses.AssemblyInfoInputs.cache
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\obj\Debug\net6.0\DataAccesses.AssemblyInfo.cs
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\obj\Debug\net6.0\DataAccesses.csproj.CoreCompileInputs.cache
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\obj\Debug\net6.0\DataAccesses.dll
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\obj\Debug\net6.0\refint\DataAccesses.dll
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\obj\Debug\net6.0\DataAccesses.pdb
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\obj\Debug\net6.0\DataAccesses.genruntimeconfig.cache
+C:\Users\thinh\Downloads\Ass02_SE160142_NguyenNgocThinh\DataAccesses\obj\Debug\net6.0\ref\DataAccesses.dll
