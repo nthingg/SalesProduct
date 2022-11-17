@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SalesWinApp
 {
@@ -22,6 +23,7 @@ namespace SalesWinApp
         private IMemberRepository memberRepository = new MemberRepository();
         private IOrderRepository orderRepository;
         private IOrderDetailRepository orderDetailRepository = new OrderDetailRepository();
+        private IProductRepository productRepository = new ProductRepository();
         private bool insertOrUpdate;
         private Order orderInfo;
         public IOrderRepository OrderRepository { set => orderRepository = value; }
@@ -53,10 +55,17 @@ namespace SalesWinApp
                     {
                         orderRepository.AddOrder(order);
                         IEnumerable<OrderDetail> orderDetails = frmOrderDetail.OrderDetails;
-                        foreach (OrderDetail orderDetail in orderDetails)
-                        {   
-                            orderDetail.OrderId = int.Parse(txtOrderID.Text);
-                            orderDetailRepository.AddOrderDetail(orderDetail);                            
+                        foreach (OrderDetail detail in orderDetails)
+                        {
+                            detail.OrderId = int.Parse(txtOrderID.Text);
+                            orderDetailRepository.AddOrderDetail(detail);
+
+                            Product product = productRepository.GetProductById(detail.ProductId);
+                            int quantity = 0;
+                            quantity = product.UnitInStock - detail.Quantity;
+                            product.UnitInStock = quantity;
+                            productRepository.UpdateProduct(product);
+
                         }
                         DialogResult = DialogResult.OK;
                     }
@@ -132,7 +141,13 @@ namespace SalesWinApp
         private void GetMemberName(int id)
         {
             Member member = memberRepository.GetMember(id);
-            txtMemberName.Text = member.MemberName;
+            if (member != null)
+            {
+                txtMemberName.Text = member.MemberName;
+            } else
+            {
+                txtMemberName.Text = "";
+            }
         }
 
         private void txtMemberID_TextChanged(object sender, EventArgs e)
@@ -143,8 +158,12 @@ namespace SalesWinApp
                 txtMemberName.Text = "";
             } 
             else
-            {
-                GetMemberName(int.Parse(txtMemberID.Text));
+            {   
+                if (validateInteger(txtMemberID.Text))
+                {
+                    GetMemberName(int.Parse(txtMemberID.Text));
+                }
+                
             }
             
         }

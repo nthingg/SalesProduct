@@ -66,7 +66,7 @@
             this.dvgData.RowHeadersWidth = 50;
             this.dvgData.RowTemplate.Height = 29;
             this.dvgData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgData.Size = new System.Drawing.Size(675, 322);
+            this.dvgData.Size = new System.Drawing.Size(850, 334);
             this.dvgData.TabIndex = 0;
             // 
             // grbFilter
@@ -82,11 +82,11 @@
             this.grbFilter.Controls.Add(this.label3);
             this.grbFilter.Controls.Add(this.label2);
             this.grbFilter.Controls.Add(this.label1);
-            this.grbFilter.Location = new System.Drawing.Point(703, 8);
+            this.grbFilter.Location = new System.Drawing.Point(890, 90);
             this.grbFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbFilter.Name = "grbFilter";
             this.grbFilter.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbFilter.Size = new System.Drawing.Size(248, 242);
+            this.grbFilter.Size = new System.Drawing.Size(259, 254);
             this.grbFilter.TabIndex = 1;
             this.grbFilter.TabStop = false;
             this.grbFilter.Text = "Filter";
@@ -144,7 +144,7 @@
             this.btnClear.Location = new System.Drawing.Point(71, 203);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(112, 22);
+            this.btnClear.Size = new System.Drawing.Size(100, 39);
             this.btnClear.TabIndex = 9;
             this.btnClear.Text = "Clear filter";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -206,7 +206,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(704, 292);
+            this.btnAdd.Location = new System.Drawing.Point(890, 31);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(82, 40);
@@ -217,7 +217,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(790, 292);
+            this.btnUpdate.Location = new System.Drawing.Point(979, 31);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(82, 40);
@@ -229,7 +229,7 @@
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(878, 292);
+            this.btnDelete.Location = new System.Drawing.Point(1067, 31);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(82, 40);
@@ -242,7 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(974, 355);
+            this.ClientSize = new System.Drawing.Size(1181, 355);
             this.ControlBox = false;
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);

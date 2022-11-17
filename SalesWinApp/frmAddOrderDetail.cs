@@ -32,16 +32,61 @@ namespace SalesWinApp
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int productID = int.Parse(cboProduct.SelectedItem.ToString().Split('.')[0]);
-            orderDetail = new OrderDetail
+            if (btnAdd.Text == "Update")
             {
-                OrderId = order.OrderId,
-                ProductId = productID,
-                ProductName = productRepository.GetProductById(productID).ProductName,
-                UnitPrice = Decimal.Parse(txtUnitPrice.Text),
-                Quantity = int.Parse(txtQuantity.Text),
-                Discount = Double.Parse(txtDiscount.Text)
-            };
+                if (txtQuantity.Text != "" && cboProduct.SelectedItem.ToString().Split('.')[0] != "-- Select --")
+                {
+                    int quantity = int.Parse(txtQuantity.Text);
+                    if (!validateQuantityUpdate(quantity))
+                    {
+                        MessageBox.Show("Unit in stock is less than required update", "Update Detail - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtQuantity.Clear();
+                    }
+                    else
+                    {
+                        int productID = int.Parse(cboProduct.SelectedItem.ToString().Split('.')[0]);
+                        orderDetail = new OrderDetail
+                        {
+                            OrderId = order.OrderId,
+                            ProductId = productID,
+                            ProductName = productRepository.GetProductById(productID).ProductName,
+                            UnitPrice = Decimal.Parse(txtUnitPrice.Text),
+                            Quantity = int.Parse(txtQuantity.Text),
+                            Discount = Double.Parse(txtDiscount.Text)
+
+                        };
+                        DialogResult = DialogResult.OK;
+                    }
+                }
+            }
+            else
+            {
+                if (txtQuantity.Text != "" && cboProduct.SelectedItem.ToString().Split('.')[0] != "-- Select --")
+                {
+                    int quantity = int.Parse(txtQuantity.Text);
+                    if (!validateQuantity(quantity))
+                    {
+                        MessageBox.Show("Unit in stock is less than required add", "Update Detail - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtQuantity.Clear();
+                    } 
+                    else
+                    {
+                        int productID = int.Parse(cboProduct.SelectedItem.ToString().Split('.')[0]);
+                        orderDetail = new OrderDetail
+                        {
+                            OrderId = order.OrderId,
+                            ProductId = productID,
+                            ProductName = productRepository.GetProductById(productID).ProductName,
+                            UnitPrice = Decimal.Parse(txtUnitPrice.Text),
+                            Quantity = int.Parse(txtQuantity.Text),
+                            Discount = Double.Parse(txtDiscount.Text)
+                        };
+                        DialogResult = DialogResult.OK;
+                    }
+                }
+            }
+
+            
         }
         private void btnReset_Click(object sender, EventArgs e)
         {
@@ -132,6 +177,24 @@ namespace SalesWinApp
 
         }
 
+        private bool validateQuantityUpdate(int quantity)
+        {
+            if (cboProduct.SelectedItem.ToString().Split('.')[0] != "-- Select --")
+            {
+                int productID = int.Parse(cboProduct.SelectedItem.ToString().Split('.')[0]);
+                Product product = productRepository.GetProductById(productID);
+                if (quantity <= product.UnitInStock + orderDetail.Quantity)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+
         private bool validateQuantity(int quantity)
         {   
             if (cboProduct.SelectedItem.ToString().Split('.')[0] != "-- Select --")
@@ -152,22 +215,10 @@ namespace SalesWinApp
 
         private void txtQuantity_Validated(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtQuantity, "");
         }
 
         private void txtQuantity_Validating(object sender, CancelEventArgs e)
         {   
-            if (txtQuantity.Text != "" && cboProduct.SelectedItem.ToString().Split('.')[0] != "-- Select --`" +
-                "") 
-            {
-                int quantity = int.Parse(txtQuantity.Text);
-                if (!validateQuantity(quantity))
-                {
-                    e.Cancel = true;
-                    errorProvider1.SetError(txtQuantity, "Quantity is less than required");
-                }
-            }
-            
         }
     }
 }

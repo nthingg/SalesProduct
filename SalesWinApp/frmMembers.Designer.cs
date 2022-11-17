@@ -61,13 +61,13 @@
             this.dvgData.RowHeadersWidth = 51;
             this.dvgData.RowTemplate.Height = 29;
             this.dvgData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgData.Size = new System.Drawing.Size(654, 344);
+            this.dvgData.Size = new System.Drawing.Size(844, 344);
             this.dvgData.TabIndex = 0;
             this.dvgData.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgData_CellFormatting);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(788, 303);
+            this.btnUpdate.Location = new System.Drawing.Point(982, 29);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(82, 50);
@@ -78,7 +78,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(686, 303);
+            this.btnAdd.Location = new System.Drawing.Point(880, 29);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(82, 50);
@@ -198,7 +198,7 @@
             this.grbFilter.Controls.Add(this.txtID);
             this.grbFilter.Controls.Add(this.lbSearchID);
             this.grbFilter.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.grbFilter.Location = new System.Drawing.Point(686, 9);
+            this.grbFilter.Location = new System.Drawing.Point(880, 88);
             this.grbFilter.Name = "grbFilter";
             this.grbFilter.Size = new System.Drawing.Size(276, 265);
             this.grbFilter.TabIndex = 9;
@@ -207,7 +207,7 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(887, 303);
+            this.btnRemove.Location = new System.Drawing.Point(1081, 29);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(75, 50);
             this.btnRemove.TabIndex = 10;
@@ -220,7 +220,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(994, 398);
+            this.ClientSize = new System.Drawing.Size(1181, 374);
             this.ControlBox = false;
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.grbFilter);

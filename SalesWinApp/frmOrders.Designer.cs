@@ -44,19 +44,19 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dvgData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgData.Location = new System.Drawing.Point(10, 9);
+            this.dvgData.Location = new System.Drawing.Point(10, 11);
             this.dvgData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dvgData.Name = "dvgData";
             this.dvgData.RowHeadersVisible = false;
             this.dvgData.RowHeadersWidth = 50;
             this.dvgData.RowTemplate.Height = 29;
             this.dvgData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgData.Size = new System.Drawing.Size(683, 333);
+            this.dvgData.Size = new System.Drawing.Size(802, 337);
             this.dvgData.TabIndex = 0;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(751, 32);
+            this.btnAdd.Location = new System.Drawing.Point(831, 28);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(82, 44);
@@ -67,7 +67,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(751, 112);
+            this.btnUpdate.Location = new System.Drawing.Point(946, 28);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(82, 44);
@@ -78,7 +78,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(751, 197);
+            this.btnDelete.Location = new System.Drawing.Point(1057, 28);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(82, 44);
@@ -89,7 +89,7 @@
             // 
             // btnDetail
             // 
-            this.btnDetail.Location = new System.Drawing.Point(751, 279);
+            this.btnDetail.Location = new System.Drawing.Point(946, 291);
             this.btnDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Size = new System.Drawing.Size(104, 44);
@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 351);
+            this.ClientSize = new System.Drawing.Size(1181, 357);
             this.ControlBox = false;
             this.Controls.Add(this.btnDetail);
             this.Controls.Add(this.btnDelete);

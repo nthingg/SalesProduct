@@ -135,19 +135,22 @@ namespace SalesWinApp
                     Product product = productRepository.GetProductById(detail.ProductId);
                     OrderDetail orderDetail = orderDetailRepository.GetDuplicateOrderDetail(detail.OrderId, detail.ProductId);
 
-                    int quantity = 0;
-                    if (detail.Quantity < orderDetail.Quantity)
+                    if (orderDetail != null)
                     {
-                        quantity = orderDetail.Quantity - detail.Quantity;
-                        product.UnitInStock += quantity;
-                    }
-                    else
-                    {
-                        quantity = detail.Quantity - orderDetail.Quantity;
-                        product.UnitInStock -= quantity;
-                    }
-                    
-                    productRepository.UpdateProduct(product);
+                        int quantity = 0;
+                        if (detail.Quantity < orderDetail.Quantity)
+                        {
+                            quantity = orderDetail.Quantity - detail.Quantity;
+                            product.UnitInStock += quantity;
+                        }
+                        else
+                        {
+                            quantity = detail.Quantity - orderDetail.Quantity;
+                            product.UnitInStock -= quantity;
+                        }
+
+                        productRepository.UpdateProduct(product);
+                    }                    
                 }
             } 
         }

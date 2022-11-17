@@ -21,6 +21,7 @@ namespace SalesWinApp
         private Member member;
         private IOrderRepository orderRepository = new OrderRepository();
         private IOrderDetailRepository orderDetailRepository = new OrderDetailRepository();
+        private IProductRepository productRepository = new ProductRepository();
         private BindingSource source;
 
         public IOrderRepository OrderRepository { set => orderRepository = value; }
@@ -50,8 +51,16 @@ namespace SalesWinApp
                 source.DataSource = orders;
                 dvgData.DataSource = null;
                 dvgData.DataSource = source;
-                this.dvgData.Columns["Member"].Visible = false;
-                this.dvgData.Columns["OrderDetails"].Visible = false;
+                if (dvgData.Rows.Count != 0) 
+                {   
+                    if (dvgData.Columns.Contains("Member")) {
+                        this.dvgData.Columns["Member"].Visible = false;
+                    }
+                    if (dvgData.Columns.Contains("OrderDetails"))
+                    {
+                        this.dvgData.Columns["OrderDetails"].Visible = false;
+                    }
+                }
                 if (orders.Count() > 0)
                 {
                     for (int i = 2; i < 5; i++)
@@ -134,9 +143,28 @@ namespace SalesWinApp
                 int index = dvgData.CurrentRow.Index;
                 List<OrderDetail> orderDetails = orderDetailForm.OrderDetails;
                 orderDetailRepository.RemoveAllDetail(order.OrderId);
-                foreach (OrderDetail orderDetail in orderDetails)
+                foreach (OrderDetail detail in orderDetails)
                 {
-                    orderDetailRepository.AddOrderDetail(orderDetail);
+                    orderDetailRepository.AddOrderDetail(detail);
+                    Product product = productRepository.GetProductById(detail.ProductId);
+                    OrderDetail orderDetail = orderDetailRepository.GetDuplicateOrderDetail(detail.OrderId, detail.ProductId);
+
+                    if (orderDetail != null)
+                    {
+                        int quantity = 0;
+                        if (detail.Quantity < orderDetail.Quantity)
+                        {
+                            quantity = orderDetail.Quantity - detail.Quantity;
+                            product.UnitInStock += quantity;
+                        }
+                        else
+                        {
+                            quantity = detail.Quantity - orderDetail.Quantity;
+                            product.UnitInStock -= quantity;
+                        }
+
+                        productRepository.UpdateProduct(product);
+                    }
                 }
                 LoadOrderList(orderRepository.GetAllOrders());
                 source.Position = index;

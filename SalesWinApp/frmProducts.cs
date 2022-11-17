@@ -60,9 +60,13 @@ namespace SalesWinApp
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Product product = dvgData.CurrentRow.DataBoundItem as Product;
-            productRepository.RemoveProduct(product.ProductId);
-            LoadProductList(productRepository.GetAllProducts());
-            loadProductFilter();
+            DialogResult d = MessageBox.Show("Do you really want to remove this product ?", "Product Management - Delete", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (d == DialogResult.Yes)
+            {
+                productRepository.RemoveProduct(product.ProductId);
+                LoadProductList(productRepository.GetAllProducts());
+                loadProductFilter();
+            }                
         }
 
         private void btnClear_Click(object sender, EventArgs e)

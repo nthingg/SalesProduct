@@ -46,20 +46,22 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dvgData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgData.Location = new System.Drawing.Point(12, 71);
+            this.dvgData.Location = new System.Drawing.Point(10, 131);
+            this.dvgData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dvgData.Name = "dvgData";
             this.dvgData.RowHeadersVisible = false;
             this.dvgData.RowHeadersWidth = 51;
             this.dvgData.RowTemplate.Height = 29;
             this.dvgData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgData.Size = new System.Drawing.Size(648, 367);
+            this.dvgData.Size = new System.Drawing.Size(720, 225);
             this.dvgData.TabIndex = 0;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(679, 76);
+            this.btnAdd.Location = new System.Drawing.Point(187, 50);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 40);
+            this.btnAdd.Size = new System.Drawing.Size(96, 42);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add ";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -67,9 +69,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(679, 122);
+            this.btnUpdate.Location = new System.Drawing.Point(317, 50);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(94, 40);
+            this.btnUpdate.Size = new System.Drawing.Size(91, 42);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update ";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -77,9 +80,10 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(679, 168);
+            this.btnRemove.Location = new System.Drawing.Point(453, 50);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(94, 40);
+            this.btnRemove.Size = new System.Drawing.Size(92, 42);
             this.btnRemove.TabIndex = 3;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -89,9 +93,10 @@
             // 
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(679, 301);
+            this.btnSave.Location = new System.Drawing.Point(242, 387);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 58);
+            this.btnSave.Size = new System.Drawing.Size(82, 44);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -99,9 +104,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(679, 380);
+            this.btnCancel.Location = new System.Drawing.Point(409, 387);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(94, 58);
+            this.btnCancel.Size = new System.Drawing.Size(82, 44);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -111,17 +117,17 @@
             // 
             this.lbOrderID.AutoSize = true;
             this.lbOrderID.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbOrderID.Location = new System.Drawing.Point(32, 20);
+            this.lbOrderID.Location = new System.Drawing.Point(28, 15);
             this.lbOrderID.Name = "lbOrderID";
-            this.lbOrderID.Size = new System.Drawing.Size(0, 31);
+            this.lbOrderID.Size = new System.Drawing.Size(0, 25);
             this.lbOrderID.TabIndex = 6;
             // 
             // frmOrderDetail
             // 
             this.AcceptButton = this.btnSave;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(742, 452);
             this.Controls.Add(this.lbOrderID);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -129,6 +135,7 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dvgData);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "frmOrderDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

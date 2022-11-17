@@ -62,6 +62,7 @@ namespace SalesWinApp
                 dvgData.DataSource = null;
                 dvgData.DataSource = source;
                 this.dvgData.Columns["Orders"].Visible = false;
+                this.dvgData.Columns["Password"].Visible = false;
                 if (!member.IsAdmin) dvgData.Columns["IsAdmin"].Visible = false;
                 if (members.Count() == 0)
                 {
@@ -167,7 +168,8 @@ namespace SalesWinApp
                 btnSortByName.Text = "Sort by name (Descending)";
                 LoadMemberList(SortMemberListByID(list));
             }
-        }     
+        }   
+        
         private void btnRemove_Click(object sender, EventArgs e)
         {
             Member mem = dvgData.CurrentRow.DataBoundItem as Member;

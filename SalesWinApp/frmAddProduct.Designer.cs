@@ -51,61 +51,63 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 61);
+            this.label2.Location = new System.Drawing.Point(21, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 20);
+            this.label2.Size = new System.Drawing.Size(84, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Product Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 93);
+            this.label3.Location = new System.Drawing.Point(21, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 20);
+            this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Category ID";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 126);
+            this.label4.Location = new System.Drawing.Point(21, 184);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 20);
+            this.label4.Size = new System.Drawing.Size(45, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Weight";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 158);
+            this.label5.Location = new System.Drawing.Point(21, 238);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 20);
+            this.label5.Size = new System.Drawing.Size(58, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "Unit Price";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 191);
+            this.label6.Location = new System.Drawing.Point(21, 290);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 20);
+            this.label6.Size = new System.Drawing.Size(49, 15);
             this.label6.TabIndex = 5;
             this.label6.Text = "In Stock";
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(134, 58);
+            this.txtProductName.Location = new System.Drawing.Point(117, 79);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(150, 27);
+            this.txtProductName.Size = new System.Drawing.Size(132, 23);
             this.txtProductName.TabIndex = 6;
             this.txtProductName.TextChanged += new System.EventHandler(this.txtProductName_TextChanged);
             // 
             // txtCategoryId
             // 
-            this.txtCategoryId.Location = new System.Drawing.Point(134, 90);
+            this.txtCategoryId.Location = new System.Drawing.Point(117, 128);
+            this.txtCategoryId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCategoryId.Name = "txtCategoryId";
-            this.txtCategoryId.Size = new System.Drawing.Size(150, 27);
+            this.txtCategoryId.Size = new System.Drawing.Size(132, 23);
             this.txtCategoryId.TabIndex = 7;
             this.txtCategoryId.TextChanged += new System.EventHandler(this.txtCategoryId_TextChanged);
             this.txtCategoryId.Validating += new System.ComponentModel.CancelEventHandler(this.txtCategoryId_Validating);
@@ -113,16 +115,18 @@
             // 
             // txtWeight
             // 
-            this.txtWeight.Location = new System.Drawing.Point(134, 123);
+            this.txtWeight.Location = new System.Drawing.Point(117, 181);
+            this.txtWeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(150, 27);
+            this.txtWeight.Size = new System.Drawing.Size(132, 23);
             this.txtWeight.TabIndex = 8;
             // 
             // txtUnitPrice
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(134, 155);
+            this.txtUnitPrice.Location = new System.Drawing.Point(117, 235);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUnitPrice.Name = "txtUnitPrice";
-            this.txtUnitPrice.Size = new System.Drawing.Size(150, 27);
+            this.txtUnitPrice.Size = new System.Drawing.Size(132, 23);
             this.txtUnitPrice.TabIndex = 9;
             this.txtUnitPrice.TextChanged += new System.EventHandler(this.txtUnitPrice_TextChanged);
             this.txtUnitPrice.Validating += new System.ComponentModel.CancelEventHandler(this.txtUnitPrice_Validating);
@@ -130,9 +134,10 @@
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(134, 188);
+            this.txtStock.Location = new System.Drawing.Point(117, 287);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(150, 27);
+            this.txtStock.Size = new System.Drawing.Size(132, 23);
             this.txtStock.TabIndex = 10;
             this.txtStock.TextChanged += new System.EventHandler(this.txtStock_TextChanged);
             this.txtStock.Validating += new System.ComponentModel.CancelEventHandler(this.txtStock_Validating);
@@ -141,17 +146,18 @@
             // txtProductId
             // 
             this.txtProductId.Enabled = false;
-            this.txtProductId.Location = new System.Drawing.Point(134, 25);
+            this.txtProductId.Location = new System.Drawing.Point(117, 24);
+            this.txtProductId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProductId.Name = "txtProductId";
-            this.txtProductId.Size = new System.Drawing.Size(150, 27);
+            this.txtProductId.Size = new System.Drawing.Size(132, 23);
             this.txtProductId.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 28);
+            this.label1.Location = new System.Drawing.Point(21, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.Size = new System.Drawing.Size(63, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Product ID";
             // 
@@ -159,9 +165,10 @@
             // 
             this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnAdd.Enabled = false;
-            this.btnAdd.Location = new System.Drawing.Point(9, 232);
+            this.btnAdd.Location = new System.Drawing.Point(12, 347);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 29);
+            this.btnAdd.Size = new System.Drawing.Size(82, 22);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -169,9 +176,10 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(109, 232);
+            this.btnReset.Location = new System.Drawing.Point(100, 347);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(94, 29);
+            this.btnReset.Size = new System.Drawing.Size(82, 22);
             this.btnReset.TabIndex = 13;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -179,9 +187,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(209, 232);
+            this.btnCancel.Location = new System.Drawing.Point(188, 347);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(94, 29);
+            this.btnCancel.Size = new System.Drawing.Size(82, 22);
             this.btnCancel.TabIndex = 14;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -195,10 +204,10 @@
             // frmAddProduct
             // 
             this.AcceptButton = this.btnAdd;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(315, 286);
+            this.ClientSize = new System.Drawing.Size(286, 380);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnAdd);
@@ -215,6 +224,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAddProduct";

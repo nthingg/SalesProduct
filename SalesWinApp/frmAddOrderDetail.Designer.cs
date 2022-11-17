@@ -123,7 +123,6 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnAdd.Enabled = false;
             this.btnAdd.Location = new System.Drawing.Point(12, 251);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
